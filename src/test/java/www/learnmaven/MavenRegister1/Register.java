@@ -34,7 +34,7 @@ public class Register {
 		WebElement lastNameInputField = driver.findElement(By.cssSelector("fieldset#account>div:nth-of-type(3) input"));
 		lastNameInputField.sendKeys("Jayapalan");
 		WebElement emailInputField = driver.findElement(By.cssSelector("fieldset#account>div:nth-of-type(4) input"));
-		emailInputField.sendKeys("neetujaya@gmail.com");
+		emailInputField.sendKeys("neetujaayapal25@gmail.com");
 		WebElement telephoneInputField = driver
 				.findElement(By.cssSelector("fieldset#account>div:nth-of-type(5) input"));
 		telephoneInputField.sendKeys("343842324");
@@ -46,8 +46,7 @@ public class Register {
 				.findElement(By.cssSelector("div#content form fieldset:nth-of-type(2)>div:nth-of-type(2) input"));
 		confirmPasswordInputField.sendKeys("Naveenlab");
 
-//		 Assert.assertEquals(passwordInputField, confirmPasswordInputField ,"Password
-//		 confirmation does not match password!");
+	
 
 //		WebElement agreeBtn = driver.findElement(By.cssSelector("div.buttons input:nth-of-type(1)"));
 //		agreeBtn.click();
@@ -58,6 +57,8 @@ public class Register {
 		WebElement alert = driver.findElement(By.cssSelector("div#account-register>div:nth-of-type(1)"));
 		String alertText = alert.getText();
 		System.out.println(alertText);
+		
+		
 		Assert.assertEquals(alertText, "Warning: You must agree to the Privacy Policy!", "text is not matching");
 
 //		WebElement accountAlert = driver.findElement(By.cssSelector("div#content h1"));
